@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Ashwini BV | Portfolio</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        body {
+            background: radial-gradient(circle at top, #0f172a, #020617);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-3d:hover {
+            transform: rotateY(8deg) rotateX(6deg) scale(1.03);
+        }
+
+        .neon-text {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4, #9333ea);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .btn-3d:hover {
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        #particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+
+</head>
+
+<body class="text-white">
+
+    <canvas id="particles"></canvas>
+    <div id="scroll-progress-bar"></div>
+
+    <!-- NAVBAR -->
+    <nav id="main-navbar" class="sticky top-0 z-50 glass shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <h1 class="text-2xl font-bold neon-text">Ashwini BV</h1>
+
+            <div class="hidden md:flex gap-8">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#participations">Achievements</a>
+                <a href="#publications">Publications</a>
+            </div>
+
+            <div class="flex gap-4">
+                <a href="https://github.com/Ashwini165-source/MERN_Stu_FebMay26Mys" target="_blank"
+                    class="hover:text-blue-400">GitHub</a>
+
+                <a href="https://www.linkedin.com/in/ashwini-bv-4a41222b2" target="_blank"
+                    class="hover:text-blue-400">LinkedIn</a>
+
+                <a href="assets/Ashwini_BV_Resume.pdf" download class="bg-blue-500 px-4 py-2 rounded btn-3d">
+                    Resume
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex flex-col lg:flex-row items-center justify-between px-10 py-20">
+
+        <div class="max-w-lg">
+
+            <h2 class="text-2xl text-blue-400 mb-2">Hello 👋</h2>
+
+            <h1 class="text-5xl font-bold neon-text mb-4">
+                Ashwini B V
+            </h1>
+
+            <p class="text-lg text-gray-300 mb-6">
+                Aspiring Software Engineer skilled in C, Java, Python and Web Development.
+                Passionate about AI-based solutions and real-world impactful systems.
+            </p>
+
+            <p class="text-xl text-blue-400 mb-6">
+                <span id="hero-typing-text"></span>
+            </p>
+
+            <div class="flex gap-4">
+                <a href="#projects" class="bg-blue-500 px-6 py-3 rounded btn-3d">Projects</a>
+                <a href="assets/Ashwini_BV_Resume.pdf" download class="bg-purple-500 px-6 py-3 rounded btn-3d">
+                    Download CV
+                </a>
+            </div>
+
+        </div>
+
+        <div class="mt-10 lg:mt-0">
+            <img src="assets/images/img.jpg" class="w-72 rounded-xl shadow-2xl card-3d">
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-20 px-10">
+        <h2 class="text-4xl text-center neon-text mb-12">Projects</h2>
+        <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="experience" class="py-20 px-10">
+
+        <h2 class="text-4xl text-center neon-text mb-12">Education</h2>
+
+        <div id="education-container" class="max-w-3xl mx-auto space-y-6"></div>
+
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-20 px-10">
+        <h2 class="text-4xl text-center neon-text mb-12">Skills</h2>
+        <div id="skills-container" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-20 px-10">
+        <h2 class="text-4xl text-center neon-text mb-12">Certifications</h2>
+        <div id="certifications-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- PARTICIPATIONS -->
+    <section id="participations" class="py-20 px-10">
+        <h2 class="text-4xl text-center neon-text mb-12">Achievements</h2>
+        <div id="participations-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="py-20 px-10">
+        <h2 class="text-4xl text-center neon-text mb-12">Publications</h2>
+        <div id="publications-container" class="grid md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- CONTACT / LET'S TALK -->
+<section id="contact" class="py-20 px-10 text-center">
+
+  <h2 class="text-4xl neon-text mb-6">Let’s Talk 👋</h2>
+
+  <form id="contact-form" class="max-w-xl mx-auto space-y-4">
+
+    <input id="contact-name" type="text"
+      placeholder="Your Name"
+      class="w-full p-3 rounded text-black">
+
+    <input id="contact-email" type="email"
+      placeholder="Your Email"
+      class="w-full p-3 rounded text-black">
+
+    <textarea id="contact-message"
+      placeholder="Your Message"
+      rows="5"
+      class="w-full p-3 rounded text-black"></textarea>
+
+    <button type="submit"
+      class="bg-blue-500 px-6 py-3 rounded text-white">
+      Send Message
+    </button>
+
+    <p id="form-message" class="text-sm"></p>
+
+  </form>
+
+</section>
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-blue-500 p-3 rounded-full shadow-lg">
+        ↑
+    </button>
+
+    <div id="cert-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+        <div class="bg-white p-4 rounded-lg relative max-w-2xl w-full">
+            <button onclick="document.getElementById('cert-modal').classList.add('hidden')"
+                class="absolute top-2 right-2 text-black font-bold">✕</button>
+
+            <img id="cert-image" class="w-full rounded">
+        </div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+
+    <!-- DATA -->
+    <script src="js/data/projects.js"></script>
+    <script src="js/data/skills.js"></script>
+    <script src="js/data/certifications.js"></script>
+    <script src="js/data/participations.js"></script>
+    <script src="js/data/publications.js"></script>
+
+    <!-- FEATURES (ALL MUST LOAD BEFORE main.js) -->
+    <script src="js/features/projects-render.js"></script>
+    <script src="js/features/skills-render.js"></script>
+    <script src="js/features/certifications-render.js"></script>
+    <script src="js/features/participations-render.js"></script>
+    <script src="js/features/publications-render.js"></script>
+
+    <script src="js/features/theme-toggle.js"></script>
+    <script src="js/features/contact-form.js"></script>
+    <script src="js/features/scroll-progress.js"></script>
+    <script src="js/features/scroll-spy.js"></script>
+    <script src="js/features/project-filter.js"></script>
+    <script src="js/features/project-search.js"></script>
+    <script src="js/features/project-sort.js"></script>
+    <script src="js/features/card-hover.js"></script>
+    <script src="js/features/geolocation.js"></script>
+    <script src="js/features/greetings.js"></script>
+    <script src="js/features/modal.js"></script>
+
+    <script src="js/features/typing-animation.js"></script>
+    <script src="js/features/back-to-top.js"></script>
+
+    <script src="js/data/education.js"></script>
+    <script src="js/features/education-render.js"></script>
+
+
+    <!-- CORE -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
